@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}{% 
+end %} {% block content %}
+
+{% for post in posts %} <div class="y_space_article">
+  <h2><a href="/{{post["author"]}}">{{post["title"]}}</a>
+    <small 
+      class="date-right">{{post["author"]}}</small>
+  </h2>
+  <article>{{post["abstract"].split('<!--more-->')[0]}}</article> </div> {% 
+end %} <div class="home-more"><a href="/blog/all"> Read More For This 
+Blog</a></div>
+
+{% end %}
+
+
